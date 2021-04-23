@@ -1,0 +1,67 @@
+<div class="bar">
+                <svg>
+                    <circle cx='50' cy='50' r='40'></circle>
+                </svg>
+                <div class="counter"><span class="spanPro">15</span> </div>
+                <div class="stop"></div>
+                <div class="progress">HTML</div>
+        </div>
+
+
+
+        .skills .bar svg{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    left: 4%;
+    top: -25%;
+    transform: translate(0%, 0%) rotate(-90deg);
+}
+.skills .bar svg circle{
+    fill: transparent;
+    stroke: #40E0D0;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animateMy 7s linear infinite;
+}
+
+@keyframes animateMy{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+.skills .bar .stop{
+    height: 87px;
+    width: 87px;
+    background:transparent;
+    border-radius: 50%;
+    border: solid 8px #40E0D0;
+    position: absolute;
+    left: 6.8%;
+    top: 14%;
+    transform: translate(0%, 0%);
+    display: none;
+}
+.bar .progress{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #40E0D0;
+    font-family: sans-serif;
+    bottom: 29px;
+    letter-spacing: 1px;
+}
+.bar .counter{
+    position: absolute;
+    left: 10%;
+    top: 29%;
+transform: translate(0%, 0%);
+font-size: 18px;
+font-weight: 800;
+color: #40E0D0;
+font-family: sans-serif;
+}
